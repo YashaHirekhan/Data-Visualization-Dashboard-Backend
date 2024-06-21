@@ -14,6 +14,10 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors()); // Enable CORS if needed
 
+app.get('/', (req, res) => {
+    res.status(200).json('Welcome, your app is working well');
+  })
+
 // Routes
 app.use('/api', dataRoutes);
 
